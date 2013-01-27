@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+		<title>learn.cryto.net</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("input").keypress(function(){
+					$(this).parent().removeClass("search-large").addClass("search-top");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<h1><strong>learn.cryto.net</strong> :: Learn something new!</h1>
+		</div>
+		<div class="main">
+			<div class="search-large">
+				I want to learn about <input type="text">.
+			</div>
+		</div>
+	</body>
+</html>
