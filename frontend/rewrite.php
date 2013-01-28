@@ -17,7 +17,15 @@ $router->routes = array(
 	)
 );
 
-$router->RouteRequest();
+try
+{
+	$router->RouteRequest();
+}
+catch (RouterException $e)
+{
+	http_status_code(404);
+	$sPageContents = "404 not found";
+}
 
 echo($sPageContents);
 
