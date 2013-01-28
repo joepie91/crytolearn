@@ -6,6 +6,11 @@ body
 	font-family: sans-serif;
 }
 
+#templates
+{
+	display: none;
+}
+
 .header
 {
 	background-color: #C9F9DF;
@@ -54,4 +59,80 @@ body
 {
 	font-size: 26px;
 	width: 180px;
+}
+
+.spinner
+{
+	margin-left: 14px;
+}
+
+.topic, .item
+{
+	padding: 9px 12px;
+	margin: 5px 20px;
+	background-color: #79E1A8;
+	font-size: 20px;
+	width: 960px;
+}
+
+.topic 
+{
+	margin-top: 19px;
+	cursor: pointer;
+}
+
+.item
+{
+	margin-left: 34px;
+	width: 926px;
+	font-size: 18px;
+	background-color: #97F3C1;
+	display: none;
+}
+
+.type
+{
+	font-size: 18px;
+	color: gray;
+}
+
+.type:after
+{
+	content: ":";
+}
+
+a.title
+{
+	color: #041F9F;
+}
+
+.toggler
+{
+	display: block;
+	float: left;
+	width: 16px;
+	height: 16px;
+	margin-top: 2px;
+	margin-right: 8px;
+	font-size: 13px;
+	text-align: center;
+	font-weight: bold;
+	border: 1px solid black;
+	background-color: #D2ECCF;
+}
+
+.providername
+{
+	font-size: 18px;
+	color: gray;
+}
+
+.providername:before
+{
+	content: "(";
+}
+
+.providername:after
+{
+	content: ")";
 }

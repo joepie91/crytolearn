@@ -10,9 +10,20 @@ class Database(object):
 	TEST = 7
 	BOOK = 8
 	AUDIOBOOK = 9
+	LECTURE = 10
 	
 	def __init__(self, host, user, password=None, database="learn"):
 		self.database = oursql.connect(host=host, user=user, db=database)
+	
+	def topic_exists(self, provider, unique_id):
+		c = self.database.cursor()
+		c.execute("SELECT `Id` FROM topics WHERE `Provider` = ? AND `ProviderId` = ? LIMIT 1", (provider, unique_id))
+		return (len(c.fetchall()) > 0)
+		
+	def item_exists(self, provider, unique_id):
+		c = self.database.cursor()
+		c.execute("SELECT `Id` FROM items WHERE `Provider` = ? AND `ProviderId` = ? LIMIT 1", (provider, unique_id))
+		return (len(c.fetchall()) > 0)
 	
 	def insert_topic(self, provider, unique_id, title, override=False, **kwargs):
 		defaults = {
@@ -56,7 +67,9 @@ class Database(object):
 			"topic_id": 0,
 			"parent_id": 0,
 			"description": "",
-			"date": None
+			"date": None,
+			"start_date": None,
+			"end_date": None
 		}
 		
 		for kwarg, val in defaults.iteritems():
@@ -78,8 +91,8 @@ class Database(object):
 		if exists == True:
 			return (False, results[0][0])
 		else:
-			c.execute("INSERT INTO items (`HasTopic`, `Type`, `Provider`, `ProviderId`, `Title`, `Description`, `ItemUrl`, `SourceUrl`, `Views`, `TopicId`, `ParentId`, `Date`)"
-				  "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", (has_topic, itemtype, provider, unique_id, title, kwargs["description"], item_url, kwargs["source_url"], 
-									       kwargs["views"], kwargs["topic_id"], kwargs["parent_id"], kwargs["date"]))
+			c.execute("INSERT INTO items (`HasTopic`, `Type`, `Provider`, `ProviderId`, `Title`, `Description`, `ItemUrl`, `SourceUrl`, `Views`, `TopicId`, `ParentId`, `Date`, `StartDate`, `EndDate`)"
+				  "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", (has_topic, itemtype, provider, unique_id, title, kwargs["description"], item_url, kwargs["source_url"], 
+									       kwargs["views"], kwargs["topic_id"], kwargs["parent_id"], kwargs["date"], kwargs["start_date"], kwargs["end_date"]))
 			
 			return (True, c.lastrowid)
