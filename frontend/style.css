@@ -136,3 +136,9 @@ a.title
 {
 	content: ")";
 }
+
+.error
+{
+	margin: 8px 16px;
+	font-size: 19px;
+}

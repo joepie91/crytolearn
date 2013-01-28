@@ -11,7 +11,7 @@
 				/*$("input").val("data");
 				runSearch();*/
 			
-				$("input").keypress(function(){
+				$("input").keyup(function(){
 					if(typeof search_timeout !== "null")
 					{
 						clearTimeout(search_timeout);
@@ -27,38 +27,53 @@
 				$(".spinner").show();
 				var query = $("input#query").val();
 				
-				$.post("/api/search", {q: query}, function(response){
-					$(".spinner").hide();
-					$(".results").html("");
-					
-					for(i in response)
-					{
-						if(response[i].items.length > 0)
+				if(query.length >= 3)
+				{
+					$.post("/api/search", {q: query}, function(response){
+						$(".spinner").hide();
+						$(".results").html("");
+						
+						if(typeof response.error == "undefined")
 						{
-							var result_wrapper = instantiateTemplate("result_wrapper");
-							
-							var result_block = instantiateTemplate("result_topic");
-							result_block.children(".title").html(response[i].title);
-							result_block.children(".providername").html(response[i].provider);
-							result_block.appendTo(result_wrapper);
-							
-							for(x in response[i].items)
+							for(i in response)
 							{
-								item = response[i].items[x];
-								
-								var item_block = instantiateTemplate("result_item");
-								item_block.children(".title").html(item.title);
-								item_block.children(".title").attr("href", item.url);
-								item_block.children(".type").html(item.type);
-								item_block.insertAfter(result_block);
+								if(response[i].items.length > 0)
+								{
+									var result_wrapper = instantiateTemplate("result_wrapper");
+									
+									var result_block = instantiateTemplate("result_topic");
+									result_block.children(".title").html(response[i].title);
+									result_block.children(".providername").html(response[i].provider);
+									result_block.appendTo(result_wrapper);
+									
+									for(x in response[i].items)
+									{
+										item = response[i].items[x];
+										
+										var item_block = instantiateTemplate("result_item");
+										item_block.children(".title").html(item.title);
+										item_block.children(".title").attr("href", item.url);
+										item_block.children(".type").html(item.type);
+										item_block.insertAfter(result_block);
+									}
+									
+									result_wrapper.appendTo(".results");
+								}
 							}
-							
-							result_wrapper.appendTo(".results");
 						}
-					}
-					
-					setHandlers();
-				}, "json");
+						else
+						{
+							$(".results").html("<div class='error'>No results.</div>");
+						}
+						
+						setHandlers();
+					}, "json");
+				}
+				else
+				{
+					$(".spinner").hide();
+					$(".results").html("<div class='error'>Enter at least 3 characters.</div>");
+				}
 			}
 			
 			function setHandlers()

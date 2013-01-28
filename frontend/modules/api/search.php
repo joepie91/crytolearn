@@ -36,14 +36,21 @@ else
 	array_unshift($db_query_arguments, '');
 	unset($db_query_arguments[0]);
 	
-	$results_topics = Topic::CreateFromQuery("SELECT * FROM topics WHERE {$db_query}", $db_query_arguments);
-	
-	$return_objects = array();
-	
-	foreach($results_topics as $topic)
+	try
 	{
-		$return_objects[] =  $topic->AsDataset();
-	}
+		$results_topics = Topic::CreateFromQuery("SELECT * FROM topics WHERE {$db_query}", $db_query_arguments);
+		
+		$return_objects = array();
 	
-	$sPageContents = json_encode($return_objects);
+		foreach($results_topics as $topic)
+		{
+			$return_objects[] =  $topic->AsDataset();
+		}
+		
+		$sPageContents = json_encode($return_objects);
+	}
+	catch (NotFoundException $e)
+	{
+		$sPageContents = json_encode(array("error" => "No results found for the specified query.", "query" => $query));
+	}
 }
