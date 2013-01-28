@@ -31,6 +31,7 @@ else
 	{
 		$db_query_terms[] = "`Title` LIKE ?";
 		$term = str_replace("%", "\%", $term);
+		$term = str_replace("_", "\_", $term);
 		$valid_term = $valid_term || (strlen($term) >= 2);
 		$db_query_arguments[] = "%{$term}%";
 	}
