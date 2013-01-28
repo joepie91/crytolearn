@@ -30,12 +30,5 @@ catch (RouterException $e)
 echo($sPageContents);
 
 /*
-$data = array();
 
-foreach(Topic::CreateFromQuery("SELECT * FROM topics WHERE `ParentId` = 0") as $topic)
-{
-	$data[] = $topic->AsDataset();
-}
-
-echo(json_encode($data));
 * */
