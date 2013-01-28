@@ -130,6 +130,8 @@
 	<body>
 		<div class="header">
 			<h1><strong>learn.cryto.net</strong> :: Learn something new!</h1>
+			<h2>Currently searching Coursera, Khan University, University of Reddit. Comments? <a href="mailto:learn@cryto.net">learn@cryto.net</a> or 
+			<a href="irc://irc.cryto.net/crytocc">irc.cryto.net #crytocc</a></h2>
 		</div>
 		<div class="main">
 			<div class="search-large">

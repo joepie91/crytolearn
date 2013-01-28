@@ -24,6 +24,12 @@ body
 	font-weight: normal;
 }
 
+.header h2
+{
+	margin: 2px;
+	font-size: 17px;
+}
+
 .search-large
 {
 	color: #006824;
