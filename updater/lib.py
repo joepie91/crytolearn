@@ -13,7 +13,7 @@ class Database(object):
 	LECTURE = 10
 	
 	def __init__(self, host, user, password=None, database="learn"):
-		self.database = oursql.connect(host=host, user=user, db=database)
+		self.database = oursql.connect(host=host, user=user, passwd=password, db=database)
 	
 	def topic_exists(self, provider, unique_id):
 		c = self.database.cursor()
