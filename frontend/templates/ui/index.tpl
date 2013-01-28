@@ -43,6 +43,7 @@
 									
 									var result_block = instantiateTemplate("result_topic");
 									result_block.children(".title").html(response[i].title);
+									result_block.children(".description").html(response[i].description);
 									result_block.children(".providername").html(response[i].provider);
 									result_block.appendTo(result_wrapper);
 									
@@ -145,6 +146,7 @@
 				<strong>Topic: </strong>
 				<span class="title"></span>
 				<span class="providername"></span>
+				<div class="description"></div>
 			</div>
 			<div id="template_result_item" class="item">
 				<span class="type"></span>

@@ -142,3 +142,13 @@ a.title
 	margin: 8px 16px;
 	font-size: 19px;
 }
+
+.description
+{
+	margin-top: 4px;
+	font-size: 13px;
+	max-height: 15px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
