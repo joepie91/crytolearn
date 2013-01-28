@@ -25,32 +25,44 @@ else
 	$terms = explode(" ", $query);
 	
 	$db_query_terms = array();
+	$valid_term = false;
 	
 	foreach($terms as $term)
 	{
 		$db_query_terms[] = "`Title` LIKE ?";
+		$term = str_replace("%", "\%", $term);
+		$valid_term = $valid_term || (strlen($term) > 2);
 		$db_query_arguments[] = "%{$term}%";
 	}
 	
-	$db_query = implode(" AND ", $db_query_terms);
-	array_unshift($db_query_arguments, '');
-	unset($db_query_arguments[0]);
-	
-	try
+	if($valid_term)
 	{
-		$results_topics = Topic::CreateFromQuery("SELECT * FROM topics WHERE {$db_query}", $db_query_arguments);
+		$db_query = implode(" AND ", $db_query_terms);
+		array_unshift($db_query_arguments, '');
+		unset($db_query_arguments[0]);
 		
-		$return_objects = array();
-	
-		foreach($results_topics as $topic)
+		try
 		{
-			$return_objects[] =  $topic->AsDataset();
-		}
+			$results_topics = Topic::CreateFromQuery("SELECT * FROM topics WHERE {$db_query}", $db_query_arguments);
+			
+			$return_objects = array();
 		
-		$sPageContents = json_encode($return_objects);
+			foreach($results_topics as $topic)
+			{
+				$return_objects[] =  $topic->AsDataset();
+			}
+			
+			$sPageContents = json_encode($return_objects);
+		}
+		catch (NotFoundException $e)
+		{
+			$sPageContents = json_encode(array("error" => "No results found for the specified query.", "query" => $query));
+		}
 	}
-	catch (NotFoundException $e)
+	else
 	{
-		$sPageContents = json_encode(array("error" => "No results found for the specified query.", "query" => $query));
+		die(json_encode(array(
+			"error" => "No valid search query specified."
+		)));
 	}
 }
