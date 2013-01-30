@@ -17,7 +17,7 @@ class Coursera(shared.Scraper):
 			self.process_item(item)
 		
 	def process_item(self, item):
-		inserted, rowid = self.insert_topic(str(item["id"]), item["name"], description=item["short_description"], needs_enrollment=True)
+		inserted, row_id = self.insert_topic(str(item["id"]), item["name"], description=item["short_description"], needs_enrollment=True)
 		
 		if inserted:
 			self.env.log("Inserted topic %s" % item["name"])
@@ -25,7 +25,7 @@ class Coursera(shared.Scraper):
 			self.env.log("Skipped topic %s" % item["name"])
 		
 		for course in item["courses"]:
-			self.process_course(course, rowid)
+			self.process_course(course, row_id)
 	
 	def process_course(self, course, topicid):
 		try:
@@ -35,7 +35,7 @@ class Coursera(shared.Scraper):
 			
 		title = self.generate_title(course['name'], start_date)
 		
-		inserted, itemid = self.insert_item(str(course["id"]), title, course["home_link"], has_topic=True, itemtype=self.COURSE, description=course["certificate_description"], start_date=start_date, topic_id=topicid)
+		inserted, row_id = self.insert_item(str(course["id"]), title, course["home_link"], has_topic=True, itemtype=self.COURSE, description=course["certificate_description"], start_date=start_date, topic_id=topicid)
 		
 		if inserted:
 			self.env.log("Inserted item %s" % title)
