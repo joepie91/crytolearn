@@ -1,0 +1,7 @@
+API:
+http://www.goodreads.com/api
+https://developers.google.com/books/docs/getting-started#books_api_v1
+
+Dumps:
+http://openlibrary.org/data/ol_dump_latest.txt.gz
+http://www.librarything.com/feeds/
