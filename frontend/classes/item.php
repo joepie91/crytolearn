@@ -87,6 +87,10 @@ class Item extends CPHPDatabaseRecordClass
 				return "book";
 			case 9:
 				return "audiobook";
+			case 10:
+				return "lecture";
+			case 11:
+				return "sandbox";
 			default:
 				return "unknown";
 		}

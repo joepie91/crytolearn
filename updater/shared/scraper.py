@@ -10,6 +10,7 @@ class Scraper(object):
 	BOOK = 8
 	AUDIOBOOK = 9
 	LECTURE = 10
+	SANDBOX = 11
 	
 	provider_id = 0
 	
