@@ -1,5 +1,5 @@
 import datetime, json, sys
-import requests, oursql
+import requests
 import shared
 
 class Coursera(shared.Scraper):
