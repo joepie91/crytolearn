@@ -97,7 +97,7 @@ class Item extends CPHPDatabaseRecordClass
 		switch($this->sProvider)
 		{
 			case 1:
-				return "Khan University";
+				return "Khan Academy";
 			case 2:
 				return "Coursera";
 			case 3:
