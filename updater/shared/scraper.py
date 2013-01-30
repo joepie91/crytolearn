@@ -24,6 +24,16 @@ class Scraper(object):
 	def run(self, *args, **kwargs):
 		raise Exception("No run() method was specified for this scraper.")
 	
+	def topic_exists(self, unique_id):
+		c = self.db.cursor()
+		c.execute("SELECT `Id` FROM topics WHERE `Provider` = ? AND `ProviderId` = ? LIMIT 1", (self.provider_id, unique_id))
+		return (len(c.fetchall()) > 0)
+		
+	def item_exists(self, unique_id):
+		c = self.db.cursor()
+		c.execute("SELECT `Id` FROM items WHERE `Provider` = ? AND `ProviderId` = ? LIMIT 1", (self.provider_id, unique_id))
+		return (len(c.fetchall()) > 0)
+	
 	def insert_topic(self, unique_id, title, override=False, **kwargs):
 		defaults = {
 			"needs_enrollment": False,
