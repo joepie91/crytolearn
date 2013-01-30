@@ -1,0 +1,116 @@
+# AGH University of Science and Technology
+http://open.agh.edu.pl/course/view.php?id=97
+# Funda Getulio Vargas - FGV Online
+http://www5.fgv.br/fgvonline/CursosGratuitosFormulario.aspx?id_curso=OCWAJUEAD_00_01/2011_1
+# Gunadarma University
+http://ocw.gunadarma.ac.id/course/about
+# Johns Hopkins Bloomberg School of Public Health
+http://ocw.jhsph.edu/courses/AdolHealthDev/?source=rss
+# Kaplan University Online & Campus Learning
+http://ocw.kaplan.edu/arts-and-sciences/academic-strategies
+# Korea University
+http://ocw.korea.edu/ocw/college-of-science/general-physics-i
+# Kyoto Seika University
+http://www.kyotomm.jp/event/exh/kyotomagic2012.php
+# Kyushu University
+http://ocw.kyushu-u.ac.jp/90901/0007/index.html
+# Massachusetts Institute of Technology
+http://ocw.mit.edu/courses/civil-and-environmental-engineering/1-00-introduction-to-computers-and-engineering-problem-solving-fall-2005
+# MOSCOW ARCHITECTURAL INSTITUTE
+http://www.open-marhi.ru/courses/detail/index.php?ID=6631
+# National Cheng Kung University
+http://yctrtrc.ncku.edu.tw/site2/newocwcourse/OCW_MAIN.php?cid=141
+# National Chiao Tung University
+http://ocw.nctu.edu.tw/riki_detail.php?pgid=335
+# National Dong Hwa University
+http://opencourse.ndhu.edu.tw/moodle/mod/forum/discuss.php?d=3
+# New Jersey Institute of Technology
+http://ocw.njit.edu/ocw/som/acct/acct-615-anandarajan/index.php
+# Paris Tech
+http://graduateschool.paristech.fr/cours.php?id=309132
+# People's Open Access Education Initiative
+http://www.peoples-uni.org/node/236
+# Shahid Beheshti University
+http://ocw.sbu.ac.ir/Default.aspx?tabid=5352&language=fa-IR
+# Students Circle Network
+http://studentscircle.net/live/2011/07/a-guide-before-learning-a-new-javascript-framework/
+# Taipei Medical University
+http://ocw.tmu.edu.tw:8080/eduCommons/general-education/53f28a1882076b7753f24eba72698a556790-shih-chi-analysis-on-historical-figures
+# The Open University
+http://openlearn.open.ac.uk/course/view.php?name=DD208_3
+# The Open University of Israel
+http://peer-news.blogspot.com/2011/12/2-10934.html
+# Tokyo Institute of Technology
+http://www.ocw.titech.ac.jp/index.php?module=General&Nendo=2012&action=T0300&GakubuCD=223&GakkaCD=224710&KougiCD=70030&Gakki=1&lang=EN
+# TU Delft
+http://feedproxy.google.com/~r/tudelft/OCW/~3/0sA6qPQKcOg/bachelor-civiele-techniek
+# Tufts University
+http://ocw.tufts.edu/Course/39
+# UNISUL - Universidade do Sul de Santa Catarina
+http://labspace.open.ac.uk
+# United Nations University
+http://ocw.unu.edu/international-institute-for-software-technology/building-a-community-of-practice-for-electronic-governance
+# Universidad Carlos III de Madrid
+http://ocw.uc3m.es/ingenieria-electrica/accionamientos-electricos
+# Universidad de Alicante
+http://ocw.ua.es/Ciencias_Sociales_y_Juridicas/actividades-deportivas-medio-ambiente
+# Universidad de Cantabria
+http://ocw.unican.es/ciencias-de-la-salud/actuacion-en-situaciones-especiales
+# Universidad de Granada
+http://ocw.ugr.es/course/view.php?id=23&topic=1
+# Universidad de Monterrey
+http://ocw.udem.edu.mx/cursos-de-profesional/administracion-de-tecnologias-de-informacion
+# Universidad de Murcia
+http://ocw.um.es/cc.-sociales/actividad-fisica-en-el-envejecimiento
+# Universidad de Oviedo
+http://ocw.uniovi.es/course/view.php?id=28&ocw=1
+# Universidad de Salamanca
+http://ocw.usal.es/ciencias-sociales-1/curso-cero-matematicas-para-ciencias-sociales-nivelacion-de-conocimientos
+# Universidad de Sevilla
+http://ocwus.us.es/matematica-aplicada/pp-3
+# Universidad de Zaragoza
+http://ocw.unizar.es/ocw/ciencias-de-la-salud-1/actividades-fisicas-y-deportivas-aereas
+# Universidad del Valle - Colombia
+http://ocw.univalle.edu.co/ocw/ingenieria-electronica-telecomunicaciones-y-afines/arquitectura-de-procesos-industriales
+# Universidad Estatal a Distancia
+http://ocw.uned.ac.cr/eduCommons/ciencias-de-la-administracion/compras-y-almacenamiento
+# Universidad Icesi
+http://www.icesi.edu.co/ocw/tic/administracion_plataformas_y_seguridad
+# Universidad Nacional de Educacion a Distancia
+http://ocw.innova.uned.es/ocwuniversia/psicologia/analisis-de-datos-en-Psico-I
+# Universidad Politica de Valencia
+http://www.upv.es/ocwasi/2010/6842
+# Universidad Politica Madrid
+http://ocw.upm.es/ingenieria-cartografica-geodesica-y-fotogrametria/3d-scanning-and-modeling
+# UNIVERSIDAD TECNICA PARTICULAR DE LOJA
+http://ocw.utpl.edu.ec/economia
+# Universitat Auta de Barcelona
+http://ocw.uab.cat/enginyeries/apunts-de-calcul-matricial-i-resolucio-de-sistemes
+# Universitat de Barcelona
+http://ocw.ub.edu/admistracio-i-direccio-dempreses
+# Universitat de les Illes Balears
+http://ocw.uib.es/ocw/infermeria/atencion-de-enfermeria-frente-situaciones-de
+# Universitat de Lleida
+http://ocw.udl.cat/arts-i-humanitats
+# Universitat de Valia
+http://ocw.uv.es/ciencias-sociales-y-juridicas/2-2
+# Universitat Jaume I
+http://e-ujier.uji.es/pls/www/!gri_www.euji22101?p_id=15&p_tipo=A&p_curso=IG23&p_idioma=CA
+# Universitat Oberta de Catalunya
+http://ocw.uoc.edu/informatica-tecnologia-i-multimedia/administracio-avancada-del-sistema-operatiu-gnu-linux
+# Universiti Teknologi Malaysia
+http://ocw.utm.my/course/view.php?id=90
+# University of California, Irvine
+http://ocw.uci.edu/courses/course.aspx?id=113
+# University of Cape Town
+http://opencontent.uct.ac.za/Centre-for-Higher-Education-Development/Centre-for-Open-Learning/A-developmental-state-The-challenge-ahead
+# University of Massachusetts Boston
+http://ocw.umb.edu:8080/eduCommons/about
+# University of Michigan
+http://open.umich.edu/education/med/oernetwork/med/em/aetc-redirect/2009
+# University of Notre Dame
+http://ocw.nd.edu/history/african-american-history-ii
+# University of Sumatera Utara
+http://ocw.usu.ac.id/course/detail/teknik-sipil-s1/4110000007-struktur-bangunan-sipil-i.html
+# University of Tsukuba
+http://ocw.tsukuba.ac.jp/6570740672698cea79d15b6678147a7679d130fb65705b665c02653b/66f87c4d7d394ecb
