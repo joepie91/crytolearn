@@ -1,0 +1,2 @@
+ALTER TABLE  `items` ADD  `CustomProviderName` VARCHAR( 250 ) NULL DEFAULT NULL;
+ALTER TABLE  `topics` ADD  `CustomProviderName` VARCHAR( 250 ) NULL DEFAULT NULL;
