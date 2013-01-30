@@ -32,7 +32,8 @@ class Database(object):
 			"start_date": None,
 			"end_date": None,
 			"parent_id": 0,
-			"description": ""
+			"description": "",
+			"provider_name": ""
 		}
 		
 		for kwarg, val in defaults.iteritems():
@@ -54,9 +55,9 @@ class Database(object):
 		if exists == True:
 			return (False, results[0][0])
 		else:
-			c.execute("INSERT INTO topics (`ParentId`, `Provider`, `ProviderId`, `Title`, `Description`, `Created`, `NeedsEnrollment`, `StartDate`, `EndDate`)"
-				  "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", (kwargs['parent_id'], provider, unique_id, title, kwargs['description'], kwargs['creation_date'], 
-				                                         kwargs['needs_enrollment'], kwargs['start_date'], kwargs['end_date']))
+			c.execute("INSERT INTO topics (`ParentId`, `Provider`, `ProviderId`, `Title`, `Description`, `Created`, `NeedsEnrollment`, `StartDate`, `EndDate`, `CustomProviderName`)"
+				  "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", (kwargs['parent_id'], provider, unique_id, title, kwargs['description'], kwargs['creation_date'], 
+				                                         kwargs['needs_enrollment'], kwargs['start_date'], kwargs['end_date'], kwargs["provider_name"]))
 			
 			return (True, c.lastrowid)
 	
@@ -69,7 +70,8 @@ class Database(object):
 			"description": "",
 			"date": None,
 			"start_date": None,
-			"end_date": None
+			"end_date": None,
+			"provider_name": ""
 		}
 		
 		for kwarg, val in defaults.iteritems():
@@ -91,8 +93,8 @@ class Database(object):
 		if exists == True:
 			return (False, results[0][0])
 		else:
-			c.execute("INSERT INTO items (`HasTopic`, `Type`, `Provider`, `ProviderId`, `Title`, `Description`, `ItemUrl`, `SourceUrl`, `Views`, `TopicId`, `ParentId`, `Date`, `StartDate`, `EndDate`)"
-				  "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", (has_topic, itemtype, provider, unique_id, title, kwargs["description"], item_url, kwargs["source_url"], 
-									       kwargs["views"], kwargs["topic_id"], kwargs["parent_id"], kwargs["date"], kwargs["start_date"], kwargs["end_date"]))
+			c.execute("INSERT INTO items (`HasTopic`, `Type`, `Provider`, `ProviderId`, `Title`, `Description`, `ItemUrl`, `SourceUrl`, `Views`, `TopicId`, `ParentId`, `Date`, `StartDate`, `EndDate`, `CustomProviderName`)"
+				  "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", (has_topic, itemtype, provider, unique_id, title, kwargs["description"], item_url, kwargs["source_url"], 
+									       kwargs["views"], kwargs["topic_id"], kwargs["parent_id"], kwargs["date"], kwargs["start_date"], kwargs["end_date"], kwargs["provider_name"]))
 			
 			return (True, c.lastrowid)
