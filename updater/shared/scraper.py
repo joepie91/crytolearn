@@ -109,3 +109,14 @@ class Scraper(object):
 									       kwargs["views"], kwargs["topic_id"], kwargs["parent_id"], kwargs["date"], kwargs["start_date"], kwargs["end_date"], kwargs["provider_name"]))
 			
 			return (True, c.lastrowid)
+			
+	def soup_to_text(self, soup):
+		strings = []
+		
+		try:
+			for el in soup:
+				strings += el._all_strings(True, True)
+		except AttributeError, e:
+			strings = soup._all_strings(True, True)
+			
+		return " ".join(strings)

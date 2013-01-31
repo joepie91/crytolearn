@@ -832,10 +832,12 @@ class Tag(PageElement):
         self.clear()
         self.append(string.__class__(string))
 
-    def _all_strings(self, strip=False):
+    def _all_strings(self, strip=False, no_comments=False):
         """Yield all child strings, possibly stripping them."""
         for descendant in self.descendants:
             if not isinstance(descendant, NavigableString):
+                continue
+            if no_comments == True and isinstance(descendant, Comment):
                 continue
             if strip:
                 descendant = descendant.strip()
